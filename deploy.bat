@@ -37,7 +37,7 @@ echo ========================================
 echo.
 echo Prochaines étapes:
 echo 1. Commitez vos changements: git add . 
-echo 2. Commit: git commit -m "Deploy portfolio"
+echo 2. Commit: git commit -m "Fix TwigBundle dependency - Ready for deployment"
 echo 3. Push: git push origin main
 echo 4. Activez GitHub Pages dans Settings du repository
 echo 5. Choisissez "GitHub Actions" comme source
