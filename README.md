@@ -22,14 +22,13 @@ Ce site web respecte parfaitement la grille d'évaluation pour obtenir **20/20**
 
 ```
 src/
-├── Controller/          # Contrôleurs Symfony
+├── Controller/         # Contrôleurs Symfony
 ├── Entity/             # Entités Doctrine
 └── Repository/         # Repositories
 
 templates/
 ├── base.html.twig      # Template de base
 ├── home/               # Pages principales
-├── blog/               # Blog technique
 └── portfolio/          # Portfolio projets
 
 public/
@@ -47,35 +46,6 @@ public/
 5. **Bilan Personnel** (`/bilan`) - Analyse et réflexion (3 pts)
 6. **Projet Professionnel** (`/projet-professionnel`) - Impact et perspectives (1 pt)
 7. **Portfolio** (`/portfolio`) - Projets avec détails techniques
-8. **Blog** (`/blog`) - Articles techniques
-
-## 🎯 Grille d'Évaluation - 20/20
-
-### ✅ FORME (3 points)
-- [x] Vocabulaire, syntaxe et grammaire corrects (1 pt)
-- [x] Charte graphique uniforme, visuels optimisés (1 pt) 
-- [x] Plan structuré et navigation claire (1 pt)
-
-### ✅ FOND (17 points)
-
-#### Présentation Entreprise (4 pts)
-- [x] Nom, localisation, secteur, durée du stage (2 pts)
-- [x] Présentation de l'entreprise et son marché (2 pts)
-
-#### Compétences Mises en Œuvre (9 pts)
-- [x] Rôle et activités multiples décrites (1 pt)
-- [x] Outils techniques et méthodes détaillés (2 pts)
-- [x] Responsabilités et rattachement hiérarchique (2 pts)
-- [x] Organisation équipe avec exemples concrets (2 pts)
-- [x] Autonomie, créativité, curiosité démontrées (2 pts)
-
-#### Bilan Personnel (3 pts)
-- [x] Ressenti sur l'expérience acquise
-- [x] Description de la progression professionnelle
-- [x] Présentation difficultés, forces et faiblesses
-
-#### Impact Projet Professionnel (1 pt)
-- [x] Conclusion sur l'impact du stage
 
 ## 🛠️ Installation Locale
 
@@ -114,7 +84,7 @@ php -S localhost:8000 -t public
 1. Commitez vos changements
 2. Poussez vers GitHub
 3. Activez GitHub Pages dans les paramètres du repository
-4. Le site sera accessible sur `https://username.github.io/`
+4. Le site sera accessible sur `https://mafraise.github.io/`
 
 ### Script de Déploiement
 ```bash
@@ -129,23 +99,11 @@ chmod +x deploy.sh && ./deploy.sh
 
 ### Structure des Contrôleurs
 - `HomeController` : Pages principales du rapport
-- `BlogController` : Articles techniques
 - `PortfolioController` : Projets réalisés
 
 ### Ajout de Contenu
 1. **Nouvelle page** : Ajouter une route dans `HomeController`
-2. **Article de blog** : Utiliser l'entité `Article`
-3. **Projet portfolio** : Modifier le tableau dans `PortfolioController`
-
-## 📊 SEO et Performance
-
-- ✅ Sitemap.xml généré
-- ✅ Robots.txt configuré
-- ✅ Meta tags Open Graph et Twitter
-- ✅ Structure sémantique HTML5
-- ✅ Responsive design
-- ✅ Optimisation des images
-- ✅ Cache navigateur configuré
+2. **Projet portfolio** : Modifier le tableau dans `PortfolioController`
 
 ## 👥 Projets Présentés
 
@@ -169,5 +127,3 @@ Stage chez Clever Age (01/07/2025 - 29/08/2025)
 Tuteur : Florian DELAVIE
 
 ---
-
-*Ce portfolio a été conçu pour respecter parfaitement la grille d'évaluation et obtenir la note maximale de 20/20.*
