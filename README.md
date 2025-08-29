@@ -69,23 +69,6 @@ symfony server:start
 php -S localhost:8000 -t public
 ```
 
-### Configuration
-1. Copiez le contenu de `env-template.txt` dans un fichier `.env`
-2. Ajustez les variables selon votre environnement
-3. Pour SQLite, activez les extensions dans php.ini :
-   ```ini
-   extension=sqlite3
-   extension=pdo_sqlite
-   ```
-
-## 🌐 Déploiement
-
-### GitHub Pages (Recommandé)
-1. Commitez vos changements
-2. Poussez vers GitHub
-3. Activez GitHub Pages dans les paramètres du repository
-4. Le site sera accessible sur `https://mafraise.github.io/`
-
 ### Script de Déploiement
 ```bash
 # Windows
