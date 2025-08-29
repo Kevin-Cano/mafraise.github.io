@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mafraise.github.io/sitemap.xml
