@@ -16,7 +16,7 @@
     },
     "require-dev": {
         "doctrine/dbal": "^3",
-        "doctrine/doctrine-bundle": "^2.15",
+        "doctrine/doctrine-bundle": "*",
         "doctrine/doctrine-migrations-bundle": "^3.4",
         "doctrine/orm": "^3.5",
         "symfony/asset": "7.3.*",

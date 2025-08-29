@@ -4,16 +4,11 @@ echo   DÉPLOIEMENT DU PORTFOLIO KEVIN CANO
 echo ========================================
 
 echo.
-echo 1. Création du fichier d'environnement...
-echo APP_ENV=prod > .env
-echo APP_SECRET=ThisTokenIsNotSoSecretChangeIt >> .env
+echo 1. Nettoyage du cache...
+php bin/console cache:clear --no-debug 2>nul || echo Cache déjà propre
 
 echo.
-echo 2. Nettoyage du cache...
-php bin/console cache:clear --env=prod --no-debug 2>nul || echo Cache déjà propre
-
-echo.
-echo 3. Vérification des fichiers...
+echo 2. Vérification des fichiers...
 if exist "public/index.php" (
     echo ✓ Point d'entrée trouvé
 ) else (
@@ -29,7 +24,7 @@ if exist "public/sitemap.xml" (
 )
 
 echo.
-echo 4. Test de l'application...
+echo 3. Test de l'application...
 echo ✓ Fichiers prêts pour le déploiement
 echo ✓ SEO optimisé (sitemap.xml, robots.txt)
 echo ✓ Meta tags configurés

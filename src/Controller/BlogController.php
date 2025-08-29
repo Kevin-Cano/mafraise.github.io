@@ -2,7 +2,6 @@
 
 namespace App\Controller;
 
-use App\Repository\ArticleRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -22,9 +21,10 @@ class BlogController extends AbstractController
     }
 
     #[Route('/category/{category}', name: 'app_blog_category')]
-    public function category(string $category, ArticleRepository $articleRepository): Response
+    public function category(string $category): Response
     {
-        $articles = $articleRepository->findByCategory($category);
+        // Temporairement sans base de données
+        $articles = [];
 
         return $this->render('blog/category.html.twig', [
             'articles' => $articles,
@@ -33,16 +33,9 @@ class BlogController extends AbstractController
     }
 
     #[Route('/{id}', name: 'app_blog_show', requirements: ['id' => '\d+'])]
-    public function show(int $id, ArticleRepository $articleRepository): Response
+    public function show(int $id): Response
     {
-        $article = $articleRepository->find($id);
-
-        if (!$article) {
-            throw $this->createNotFoundException('Article non trouvé');
-        }
-
-        return $this->render('blog/show.html.twig', [
-            'article' => $article,
-        ]);
+        // Temporairement sans base de données
+        throw $this->createNotFoundException('Article non trouvé');
     }
 }
