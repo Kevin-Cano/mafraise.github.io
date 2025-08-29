@@ -1,0 +1,56 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Blog - Articles Techniques{% endblock %}
+
+{% block body %}
+<!-- Hero Section -->
+<section class="hero-section">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-10">
+                <h1 class="display-5 fw-bold mb-4">
+                    <i class="fas fa-blog me-3"></i>Blog Technique
+                </h1>
+                <p class="lead">
+                    Articles sur mes découvertes techniques et retours d'expérience
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Articles -->
+<section class="py-5">
+    <div class="container">
+        {% if articles|length > 0 %}
+            <div class="row">
+                {% for article in articles %}
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ article.title }}</h5>
+                            <p class="card-text">{{ article.excerpt|default(article.content|slice(0, 150) ~ '...') }}</p>
+                            <small class="text-muted">{{ article.createdAt|date('d/m/Y') }}</small>
+                            <div class="mt-2">
+                                <span class="badge bg-primary">{{ article.category }}</span>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <a href="{{ path('app_blog_show', {id: article.id}) }}" class="btn btn-primary btn-sm">
+                                Lire l'article
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        {% else %}
+            <div class="text-center py-5">
+                <i class="fas fa-file-alt fa-5x text-muted mb-4"></i>
+                <h3>Aucun article pour le moment</h3>
+                <p class="text-muted">Les articles techniques seront bientôt disponibles !</p>
+            </div>
+        {% endif %}
+    </div>
+</section>
+{% endblock %}

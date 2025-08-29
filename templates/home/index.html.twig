@@ -1,0 +1,236 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Accueil - Kevin CANO - Développeur Full Stack{% endblock %}
+
+{% block body %}
+<!-- Hero Section -->
+<section class="hero-section">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-8">
+                <h1 class="display-4 fw-bold mb-4">
+                    <i class="fas fa-code me-3"></i>Kevin CANO
+                </h1>
+                <h2 class="h3 mb-4">Développeur Full Stack en Stage</h2>
+                <p class="lead mb-4">
+                    Passionné par le développement web, j'ai effectué un stage de 2 mois chez 
+                    <strong>Clever Age</strong> en tant que développeur full stack, découvrant 
+                    des technologies comme Drupal, NextJS et IbexaDXP sur des projets clients prestigieux.
+                </p>
+                <div class="mb-4">
+                    <span class="tech-badge">PHP</span>
+                    <span class="tech-badge">Symfony</span>
+                    <span class="tech-badge">Drupal</span>
+                    <span class="tech-badge">NextJS</span>
+                    <span class="tech-badge">IbexaDXP</span>
+                    <span class="tech-badge">JavaScript</span>
+                </div>
+                <div>
+                    <a href="{{ path('app_about') }}" class="btn btn-primary btn-lg me-3">
+                        <i class="fas fa-user me-2"></i>Découvrir mon profil
+                    </a>
+                    <a href="{{ path('app_portfolio') }}" class="btn btn-outline-light btn-lg">
+                        <i class="fas fa-folder-open me-2"></i>Voir mes projets
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-4 text-center">
+                <div class="bg-white bg-opacity-10 p-4 rounded-3">
+                    <i class="fas fa-graduation-cap fa-5x mb-3"></i>
+                    <h4>Bachelor 2</h4>
+                    <p class="mb-2">BORDEAUX YNOV CAMPUS</p>
+                    <hr>
+                    <h5>Stage chez Clever Age</h5>
+                    <p class="mb-0">01/07/2025 - 29/08/2025</p>
+                    <p class="small">Tuteur : Florian DELAVIE</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Sections principales -->
+<section class="py-5">
+    <div class="container">
+        <div class="row">
+            <!-- Clever Age -->
+            <div class="col-md-6 col-lg-3 mb-4">
+                <div class="card h-100 text-center">
+                    <div class="card-body">
+                        <i class="fas fa-building fa-3x text-primary mb-3"></i>
+                        <h5 class="card-title">Clever Age</h5>
+                        <p class="card-text">
+                            Découvrez l'agence digitale full-service où j'ai effectué mon stage, 
+                            ses valeurs et son expertise.
+                        </p>
+                        <a href="{{ path('app_entreprise') }}" class="btn btn-primary">
+                            <i class="fas fa-arrow-right me-1"></i>En savoir plus
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mon Stage -->
+            <div class="col-md-6 col-lg-3 mb-4">
+                <div class="card h-100 text-center">
+                    <div class="card-body">
+                        <i class="fas fa-briefcase fa-3x text-success mb-3"></i>
+                        <h5 class="card-title">Missions & Projets</h5>
+                        <p class="card-text">
+                            Mes missions de développeur full stack sur des projets clients 
+                            comme l'Aéroport de Bordeaux, InfoTBM et Nhood.
+                        </p>
+                        <a href="{{ path('app_stage') }}" class="btn btn-success">
+                            <i class="fas fa-arrow-right me-1"></i>Voir mes missions
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bilan Personnel -->
+            <div class="col-md-6 col-lg-3 mb-4">
+                <div class="card h-100 text-center">
+                    <div class="card-body">
+                        <i class="fas fa-chart-line fa-3x text-warning mb-3"></i>
+                        <h5 class="card-title">Bilan Personnel</h5>
+                        <p class="card-text">
+                            Mon ressenti sur cette expérience, les compétences acquises 
+                            et les défis relevés.
+                        </p>
+                        <a href="{{ path('app_bilan') }}" class="btn btn-warning">
+                            <i class="fas fa-arrow-right me-1"></i>Lire mon bilan
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Projet Professionnel -->
+            <div class="col-md-6 col-lg-3 mb-4">
+                <div class="card h-100 text-center">
+                    <div class="card-body">
+                        <i class="fas fa-rocket fa-3x text-info mb-3"></i>
+                        <h5 class="card-title">Projet Professionnel</h5>
+                        <p class="card-text">
+                            L'impact de ce stage sur mon projet professionnel 
+                            et mes perspectives d'avenir.
+                        </p>
+                        <a href="{{ path('app_projet_professionnel') }}" class="btn btn-info">
+                            <i class="fas fa-arrow-right me-1"></i>Mes perspectives
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Projets récents -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <h2 class="section-title text-center">
+            <i class="fas fa-folder-open me-2"></i>Mes Projets Récents
+        </h2>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <i class="fas fa-plane me-2 text-primary"></i>Aéroport de Bordeaux
+                        </h5>
+                        <p class="card-text">Migration du moteur de vol avec Drupal 9</p>
+                        <div class="mb-2">
+                            <span class="tech-badge">Drupal 9</span>
+                            <span class="tech-badge">PHP</span>
+                            <span class="tech-badge">API REST</span>
+                        </div>
+                        <a href="{{ path('app_portfolio') }}" class="btn btn-outline-primary btn-sm">
+                            Voir le projet
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <i class="fas fa-bus me-2 text-success"></i>InfoTBM
+                        </h5>
+                        <p class="card-text">Nouvelles fonctionnalités en NextJS</p>
+                        <div class="mb-2">
+                            <span class="tech-badge">NextJS</span>
+                            <span class="tech-badge">React</span>
+                            <span class="tech-badge">JavaScript</span>
+                        </div>
+                        <a href="{{ path('app_portfolio') }}" class="btn btn-outline-success btn-sm">
+                            Voir le projet
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <i class="fas fa-shopping-center me-2 text-info"></i>Nhood
+                        </h5>
+                        <p class="card-text">Refonte usine à sites avec IbexaDXP</p>
+                        <div class="mb-2">
+                            <span class="tech-badge">IbexaDXP</span>
+                            <span class="tech-badge">Symfony</span>
+                            <span class="tech-badge">API</span>
+                        </div>
+                        <a href="{{ path('app_portfolio') }}" class="btn btn-outline-info btn-sm">
+                            Voir le projet
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="text-center mt-4">
+            <a href="{{ path('app_portfolio') }}" class="btn btn-primary btn-lg">
+                <i class="fas fa-folder-open me-2"></i>Voir tous mes projets
+            </a>
+        </div>
+    </div>
+</section>
+
+{% if latest_articles|length > 0 %}
+<!-- Articles récents -->
+<section class="py-5">
+    <div class="container">
+        <h2 class="section-title text-center">
+            <i class="fas fa-blog me-2"></i>Articles Récents
+        </h2>
+        <div class="row">
+            {% for article in latest_articles %}
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ article.title }}</h5>
+                        <p class="card-text">{{ article.excerpt|default(article.content|slice(0, 150) ~ '...') }}</p>
+                        <small class="text-muted">
+                            <i class="fas fa-calendar me-1"></i>{{ article.createdAt|date('d/m/Y') }}
+                        </small>
+                        <div class="mt-2">
+                            <a href="{{ path('app_blog_show', {id: article.id}) }}" class="btn btn-outline-primary btn-sm">
+                                Lire la suite
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        
+        <div class="text-center mt-4">
+            <a href="{{ path('app_blog') }}" class="btn btn-primary">
+                <i class="fas fa-blog me-2"></i>Voir tous les articles
+            </a>
+        </div>
+    </div>
+</section>
+{% endif %}
+{% endblock %}
